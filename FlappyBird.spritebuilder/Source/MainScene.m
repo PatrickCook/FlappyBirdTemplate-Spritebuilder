@@ -51,7 +51,7 @@
 
 - (void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event {
     if (!_gameOver) {
-        [character.physicsBody applyAngularImpulse:10000.f];
+        [character.physicsBody applyAngularImpulse:15000.f];
         _sinceTouch = 0.f;
         
         @try
@@ -124,7 +124,7 @@
     }
     
     if ((_sinceTouch > 0.5f)) {
-        [character.physicsBody applyAngularImpulse:-60000.f*delta];
+        [character.physicsBody applyAngularImpulse:-40000.f*delta];
     }
     
     physicsNode.position = ccp(physicsNode.position.x - (character.physicsBody.velocity.x * delta), physicsNode.position.y);
