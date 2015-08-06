@@ -123,7 +123,7 @@
         character.physicsBody.angularVelocity = angularVelocity;
     }
     
-    if ((_sinceTouch > 0.5f)) {
+    if ((_sinceTouch > 1.0f)) {
         [character.physicsBody applyAngularImpulse:-40000.f*delta];
     }
     
